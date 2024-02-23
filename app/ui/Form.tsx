@@ -1,9 +1,15 @@
 "use client";
 
 import { Button } from "./Button";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 
-export default function Form() {
+interface FormProps {
+  textResponse: Dispatch<SetStateAction<string>>;
+}
+
+export const Form: React.FC<FormProps> = ({ textResponse }) => {
+
+  
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -34,7 +40,7 @@ export default function Form() {
     // Access the transcribed text
     const text = data.text;
 
-    console.log(text);
+    textResponse(text);
 
 
     // Handle response
