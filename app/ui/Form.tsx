@@ -27,7 +27,7 @@ export const Form: React.FC<FormProps> = ({ textResponse }) => {
     // Display a loading indicator while waiting for the response
     setLoading(true);
 
-    fetch("https://a0fb-34-31-51-194.ngrok-free.app/upload", {
+    fetch("https://b799-34-31-51-194.ngrok-free.app/upload", {
       method: "POST",
       body: formData,
     })
