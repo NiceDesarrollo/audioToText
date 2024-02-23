@@ -22,12 +22,12 @@ export const Form: React.FC<FormProps> = ({ textResponse }) => {
 
     const formData = new FormData();
     formData.append("file", selectedFile); // Add 'audioFile' key for backend identification
-    
+
 
     // Display a loading indicator while waiting for the response
     setLoading(true);
 
-    fetch("http://34.31.51.194:8080/upload", {
+    fetch("https://a0fb-34-31-51-194.ngrok-free.app/upload", {
       method: "POST",
       body: formData,
     })
