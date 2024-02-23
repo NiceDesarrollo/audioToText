@@ -22,6 +22,7 @@ export const Form: React.FC<FormProps> = ({ textResponse }) => {
 
     const formData = new FormData();
     formData.append("file", selectedFile); // Add 'audioFile' key for backend identification
+    
 
     // Display a loading indicator while waiting for the response
     setLoading(true);
